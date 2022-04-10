@@ -10,9 +10,10 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+git clone https://github.com/vernesong/OpenClash package/xhh/luci-app-openclash                           # 拉取openclash
 
-# Add a feed source
-#echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+#拉取另一版本的网易云解锁插件
+git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic package/xhh/luci-app-UnblockNeteaseMusic
+
+git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat package/luci-theme-opentomcat                 #拉取主题
+git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/xhh/luci-theme-edge           # 拉取edge主题
